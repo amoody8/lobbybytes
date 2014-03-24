@@ -1,0 +1,4 @@
+[date-from] [date-from-hour] [date-from-min]<br>[date-to] [date-to-hour] [date-to-min]<br>
+<label>Res:</label> [resources]<br>
+<label>Name:</label> [thename]<br>
+<label>Email:</label> [email]<br><label>Country:</label> [country]
