@@ -801,7 +801,7 @@ figure {
 	font-size:13px;
 	line-height:22px;
 	color:#4f4f4f;
-	max-width:400px;
+	max-width:270px;
 	float:left;
 }
 @media (min-width:500px) and (max-width:767px) {
