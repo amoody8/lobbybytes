@@ -339,6 +339,19 @@ figure {
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
 	border-color: transparent;
 }
+@media screen and (min-width:768px) and (max-width:1019px) {
+#sidebar {
+	width:320px;
+	display:none;
+	position:absolute;
+	top:102px;
+	right:0;
+	background:#FFF;
+	z-index:4;
+	box-shadow:1px 2px 15px rgba(0,0,0,.25);
+	padding-top: 15px;
+}
+}
 @media screen and (min-width:300px) and (max-width:768px) {
 
 #sidebar {
@@ -790,6 +803,16 @@ figure {
 	color:#4f4f4f;
 	max-width:400px;
 	float:left;
+}
+@media (min-width:500px) and (max-width:767px) {
+.latest-post .description{
+	overflow:hidden;
+	font-size:13px;
+	line-height:22px;
+	color:#4f4f4f;
+	max-width:768px;
+	float:left;
+}
 }
 @media (min-width:1020px) and (max-width:1024px) {
 .latest-post .description{
@@ -1457,7 +1480,7 @@ li.widget{
 	background: #ececec;
 	padding: 8px 25px;
 	font-style: italic;
-	width: 270px;
+	width: 255px;
 }
 .subscribe-form input[type="submit"] {
 	float: left;
