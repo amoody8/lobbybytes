@@ -770,7 +770,16 @@ if ( ! function_exists( 'articleimg' ) ) :
 function articleimg(){
 	if ( '' != get_the_post_thumbnail() ) { ?>
 			<figure class="image-holder hidden-xs">
-							<?php the_post_thumbnail('article-thumb');?></figure>
+							<?php the_post_thumbnail('article-thumb');?>
+			</figure>
+			<div class="description">
+				<div class="panel">
+					<time datetime="<?php the_time('F j, Y');?>"><?php the_time('F j, Y'); ?> </time>
+					<span class="title"><?php the_field('description'); ?></span>
+				</div>
+				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
+			</div>
 
 	<?php }else{ ?>
 		<div style="display:none">
@@ -778,6 +787,14 @@ function articleimg(){
 							<?php the_post_thumbnail('article-thumb'); ?>
 	 	</figure>
 	 	</div>
+	 	<div class="description-no-img">
+			<div class="panel">
+				<time datetime="<?php the_time('F j, Y');?>"><?php the_time('F j, Y'); ?> </time>
+				<span class="title"><?php the_field('description'); ?></span>
+			</div>
+			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			<p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
+		</div>
 <?php }
 }
 endif; 
