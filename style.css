@@ -806,6 +806,34 @@ figure {
 	max-width:270px;
 	float:left;
 }
+@media (min-width:768px) and (max-width:991px){
+.latest-post .description{
+	overflow:hidden;
+	font-size:13px;
+	line-height:22px;
+	color:#4f4f4f;
+	max-width:400px;
+	float:left;
+}
+}
+@media (min-width:300px) and (max-width:480px){
+.latest-post .description{
+	overflow:hidden;
+	font-size:13px;
+	line-height:22px;
+	color:#4f4f4f;
+	max-width:100%;
+	float:left;
+}
+}
+.latest-post .description-no-img{
+	overflow:hidden;
+	font-size:13px;
+	line-height:22px;
+	color:#4f4f4f;
+	max-width:100%;
+	float:left;
+}
 @media (min-width:500px) and (max-width:767px) {
 .latest-post .description{
 	overflow:hidden;
@@ -813,6 +841,14 @@ figure {
 	line-height:22px;
 	color:#4f4f4f;
 	max-width:768px;
+	float:left;
+}
+.latest-post .description-no-img{
+	overflow:hidden;
+	font-size:13px;
+	line-height:22px;
+	color:#4f4f4f;
+	max-width:100%;
 	float:left;
 }
 }
@@ -823,6 +859,14 @@ figure {
 	line-height:22px;
 	color:#4f4f4f;
 	max-width:310px;
+	float:left;
+}
+.latest-post .description-no-img{
+	overflow:hidden;
+	font-size:13px;
+	line-height:22px;
+	color:#4f4f4f;
+	max-width:100%;
 	float:left;
 }
 }
@@ -838,6 +882,18 @@ figure {
 .latest-post .description h3 a{color:#4f4f4f;}
 .latest-post .description p{margin:0 0 10px;}
 .latest-post .description p a{
+	font-size:12px;
+	color:#732c7b;
+	font-weight:bold;
+	font-style:italic;
+}
+.latest-post .description-no-img h3{
+	margin:0 0 10px;
+	font: 24px/29px 'economicabold',Arial,Helvetica,sans-serif;
+}
+.latest-post .description-no-img h3 a{color:#4f4f4f;}
+.latest-post .description-no-img p{margin:0 0 10px;}
+.latest-post .description-no-img p a{
 	font-size:12px;
 	color:#732c7b;
 	font-weight:bold;
@@ -1710,6 +1766,7 @@ ul#menu-categories li a:hover, li#categories-3 ul li.active a, li#categories-3 u
 .widget.shop .image-holder{
 	border:3px solid #efefef;
 	margin:0 0 3px;
+	overflow: hidden;
 }
 .widget.calendar{
 	padding:0 0 0 2px;
@@ -1737,7 +1794,7 @@ ul#menu-categories li a:hover, li#categories-3 ul li.active a, li#categories-3 u
 }
 #footer .holder {
 	margin: 0 auto;
-	max-width: 1170px;
+	max-width: 960px;
 	padding: 0 10px;
 	overflow: hidden;
 }
