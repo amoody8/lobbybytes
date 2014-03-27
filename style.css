@@ -698,8 +698,10 @@ figure {
 	border:3px solid #efefef;
 	margin:0 0 16px;
 	display: table;
+	max-height: 276px;
+	overflow: hidden;
 }
-.featured .image-holder img{vertical-align:top;}
+.featured .image-holder img{vertical-align:top;width: 100%;height: 100%;}
 .featured h3{
 	font: 25px/30px 'economicabold',Arial,Helvetica,sans-serif;
 	margin:8px 0 9px;
