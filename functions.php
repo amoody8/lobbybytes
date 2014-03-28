@@ -29,8 +29,10 @@ function my_jquery_enqueue() {
    wp_deregister_script('otw_dropdown_js');
    wp_deregister_script('jquery');
    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", false, null);
+   wp_register_script('jquery-ui', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js", false, null);
    wp_register_script('jquery-migrate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-migrate-1.2.1.js", false, null);
    wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery-ui');
    wp_enqueue_script('jquery-migrate');
 }
 function am_scripts_with_jquery()
@@ -41,14 +43,14 @@ function am_scripts_with_jquery()
 	wp_register_script( 'bootstrap-min', get_template_directory_uri() . '/bootstrap/dist/js/bootstrap.min.js', array( 'jquery' ) );
 	wp_register_script( 'dropdown-script', get_template_directory_uri() . '/bootstrap/js/hover-dropdown.min.js', array( 'jquery' ) );
 	wp_register_script( 'collapse-script', get_template_directory_uri() . '/bootstrap/js/collapse.js', array( 'jquery' ) );
-	//wp_register_script( 'rwdimg-script', get_template_directory_uri() . '/js/jquery.rwdImages.min.js', array( 'jquery' ) );
+	wp_register_script( 'placeholder-script', get_template_directory_uri() . '/js/jquery.placeholder.js', array( 'jquery' ) );
 // Enqueue Scripts
 	wp_enqueue_script( 'custom-script' );
 	wp_enqueue_script( 'sticky-nav' );
 	wp_enqueue_script( 'bootstrap-min' );
 	wp_enqueue_script( 'dropdown-script' );
 	wp_enqueue_script( 'collapse-script' );
-	//wp_enqueue_script( 'rwdimg-script' );
+	wp_enqueue_script( 'placeholder-script' );
 }
 add_action( 'wp_enqueue_scripts', 'am_scripts_with_jquery' );
 
@@ -315,31 +317,31 @@ class instagram_widget extends WP_Widget {
 add_action('widgets_init', create_function('', 'return register_widget("instagram_widget");'));
 
 //Stay widget
-//class stay_widget extends WP_Widget {
+class booking_widget extends WP_Widget {
  
  
-    /** constructor -- name this the same as the class above 
-    function stay_widget() {
-        parent::WP_Widget(false, $name = 'Stay With Us Widget');	
+    /** constructor -- name this the same as the class above */
+    function booking_widget() {
+        parent::WP_Widget(false, $name = 'Stay With Us Booking Widget');	
     }
  
-    /** @see WP_Widget::widget -- do not rename this 
+    /** @see WP_Widget::widget -- do not rename this */
     function widget($args, $instance) {	
         extract( $args );
         $title 		= apply_filters('widget_title', $instance['title']);
         $message 	= $instance['message'];
         $stay_link	= get_field('stay_link','option');
-        $logo		= '<strong class="logo"><a class="homebtn" href='. $stay_link .'>Dream Downtown</a></strong>';
+        $logo		= '<strong class="logo"><a target="_blank" class="homebtn" href='. $stay_link .'>Dream Downtown</a></strong>';
         ?>
               <?php echo $before_widget; ?>
                   <?php if ( $title )
                         echo $before_title . $title . $logo . $after_title; ?>
-							<?php echo do_shortcode('[stay]') ?>
+							<?php get_template_part('inc/booking-widget','lobbybytes'); ?>
               <?php echo $after_widget; ?>
         <?php
     }
  
-    /** @see WP_Widget::update -- do not rename this 
+    /** @see WP_Widget::update -- do not rename this */
     function update($new_instance, $old_instance) {		
 		$instance = $old_instance;
 		$instance['title'] = strip_tags($new_instance['title']);
@@ -347,7 +349,7 @@ add_action('widgets_init', create_function('', 'return register_widget("instagra
         return $instance;
     }
  
-    /** @see WP_Widget::form -- do not rename this 
+    /** @see WP_Widget::form -- do not rename this */
     function form($instance) {	
  
         $title 		= esc_attr($instance['title']);
@@ -363,7 +365,7 @@ add_action('widgets_init', create_function('', 'return register_widget("instagra
  
  
 } // end class stay_widget
-add_action('widgets_init', create_function('', 'return register_widget("stay_widget");')); */
+add_action('widgets_init', create_function('', 'return register_widget("booking_widget");')); 
 
 //Stay With Us Button widget
 class stay_btn_widget extends WP_Widget {
@@ -800,20 +802,4 @@ function articleimg(){
 <?php }
 }
 endif; 
-
-//register events CPT
-add_action( 'init', 'events_cpt' );
-
-function events_cpt() {
-
-register_post_type( 'event', array(
-  'labels' => array(
-    'name' => 'Events',
-    'singular_name' => 'Event',
-   ),
-  'description' => 'Add Upcoming Events',
-  'public' => true,
-  'supports' => array( 'title', 'editor', 'exceprt','custom-fields' )
-));
-}
  ?>
