@@ -577,10 +577,24 @@ a.lobo {
 	position:relative;
 }
 .slide-holder .text-wrap{
-	position:absolute;
-	bottom:23px;
-	left:0;
-	z-index:5;
+	position: absolute;
+	right: 50%;
+	margin-right: 13%;
+	top: 30%;
+}
+@media and (max-width:830px){
+.slide-holder .text-wrap{
+	position: absolute;
+	right: 0px;
+	margin-right: 0px;
+	width: 100%;
+	text-align: center;
+	top: auto;
+	bottom: 10px;
+	background: #fff;
+	background: rgba(255,255,255,0.9);
+	padding: 5px 0;
+}
 }
 .slide-holder .holder{
 	font: 28px/30px 'economicabold',Arial,Helvetica,sans-serif;

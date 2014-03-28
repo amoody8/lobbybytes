@@ -29,10 +29,10 @@ function my_jquery_enqueue() {
    wp_deregister_script('otw_dropdown_js');
    wp_deregister_script('jquery');
    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", false, null);
-   wp_register_script('jquery-ui', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js", false, null);
+   //wp_register_script('jquery-ui', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js", false, null);
    wp_register_script('jquery-migrate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-migrate-1.2.1.js", false, null);
    wp_enqueue_script('jquery');
-    wp_enqueue_script('jquery-ui');
+   //wp_enqueue_script('jquery-ui');
    wp_enqueue_script('jquery-migrate');
 }
 function am_scripts_with_jquery()
@@ -85,6 +85,8 @@ set_post_thumbnail_size( 50, 50, true ); // default Post Thumbnail dimensions (c
 the_post_thumbnail('medium');          // Medium resolution (default 300px x 300px max)
 the_post_thumbnail('large');           // Large resolution (default 640px x 640px max)
 the_post_thumbnail('full');            // Original image resolution (unmodified)
+
+add_image_size( 'slider', 1024, 391, true); 
 add_image_size( 'featured-thumb', 598, 270 ); 
 add_image_size( 'article-thumb', 295, 185, true); 
 add_image_size( 'article-thumb-sm', 145, 166, true); 
@@ -802,4 +804,22 @@ function articleimg(){
 <?php }
 }
 endif; 
+
+/*if ( ! function_exists( 'eventimg' ) ) :
+function eventimg(){
+	$image = the_sub_field('event_image');
+	if ( '' != get_sub_field('event_image') ) { ?>
+			<div class="image-holder hidden-xs">
+				<img src="<?php echo $image['url']; ?>" >
+			</div>
+
+	<?php }else{ ?>
+		<div style="display:none">
+			<div class="image-holder hidden-xs">
+				<?php the_sub_field('event_image'); ?>
+			</div>
+		</div>
+<?php }
+}
+endif; */
  ?>
