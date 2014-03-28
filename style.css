@@ -2574,5 +2574,24 @@ a.at-quickshare-link: hover {
 	left: auto;
 	margin-left: auto;
 }
-
 }
+.wyndhamWidget {
+	position:relative;
+	margin:30px auto 60px;
+	width:290px;
+	overflow:visible;
+	z-index:2;
+}
+/*.wyndhamWidget .WHGWR_widget_wrap .WHGWR_search,
+.wyndhamWidget .WHGWR_widget_wrap .WHGWR_review {
+	background: url(../images/wr_widget/global/widgetMidcap.png) repeat-y top left;
+	width: 195px;
+	float: left;
+	margin-top: 0px;
+	padding-left: 34px;
+	padding-bottom: 15px;
+	padding-top: 10px;
+	position: relative;
+	display: block;
+	z-index: 300;
+}*/
