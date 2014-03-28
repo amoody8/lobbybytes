@@ -79,7 +79,7 @@
 							<span class="icon-bar"></span>
 							</div>
 					</button>
-					<a title="<?php echo get_bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><img class="img-responsive pull-left" title="<?php bloginfo('name');?>" alt="<?php bloginfo('name');?>" src="<?php echo get_bloginfo('template_directory');?>/images/lobo.png "></a>
+					<a class="lobo" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><img class="img-responsive pull-left" title="<?php bloginfo('name');?>" alt="<?php bloginfo('name');?>" src="<?php echo get_bloginfo('template_directory');?>/images/lobo.png "></a>
 
 					<div class="container collapse navbar-collapse navbar-responsive-collapse" id="nav">
 						<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>

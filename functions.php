@@ -41,12 +41,14 @@ function am_scripts_with_jquery()
 	wp_register_script( 'bootstrap-min', get_template_directory_uri() . '/bootstrap/dist/js/bootstrap.min.js', array( 'jquery' ) );
 	wp_register_script( 'dropdown-script', get_template_directory_uri() . '/bootstrap/js/hover-dropdown.min.js', array( 'jquery' ) );
 	wp_register_script( 'collapse-script', get_template_directory_uri() . '/bootstrap/js/collapse.js', array( 'jquery' ) );
+	//wp_register_script( 'rwdimg-script', get_template_directory_uri() . '/js/jquery.rwdImages.min.js', array( 'jquery' ) );
 // Enqueue Scripts
 	wp_enqueue_script( 'custom-script' );
 	wp_enqueue_script( 'sticky-nav' );
 	wp_enqueue_script( 'bootstrap-min' );
 	wp_enqueue_script( 'dropdown-script' );
 	wp_enqueue_script( 'collapse-script' );
+	//wp_enqueue_script( 'rwdimg-script' );
 }
 add_action( 'wp_enqueue_scripts', 'am_scripts_with_jquery' );
 
@@ -569,7 +571,7 @@ add_action('widgets_init', create_function('', 'return register_widget("mixcloud
 
 //shop shortcode
 function shop_shortcode(){
-	$shop= 	'<section class="widget shop"><div class="image-holder"><img class="resize" src="http://client.tvidesigns.com/taogroup/saharadreamswebsite/beta/wp-content/uploads/2014/03/img2.jpg" alt="Shop at our Online Store" title="Shop at our Online Store"></div><div><a class="btn" href="#" title="" alt="">Visit Our Online Store</a></div></section>';
+	$shop= 	'<section class="widget shop"><div class="image-holder"><img class="resize" src="http://client.tvidesigns.com/taogroup/saharadreamswebsite/beta/wp-content/uploads/2014/03/img2.jpg" alt="Shop at our Online Store" title="Shop at our Online Store"></div><div><a class="btn" href="https://dreamdowntown.myshopify.com/" title="" alt="" target="_blank">Visit Our Online Store</a></div></section>';
     	return $shop;  
 } 
 function shop_insert_shortcode($atts, $content=null){  
@@ -775,7 +777,7 @@ function articleimg(){
 			<div class="description">
 				<div class="panel">
 					<time datetime="<?php the_time('F j, Y');?>"><?php the_time('F j, Y'); ?> </time>
-					<span class="title"><?php the_field('description'); ?></span>
+					<span class="title"><?php the_category(' '); ?></span>
 				</div>
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
@@ -790,7 +792,7 @@ function articleimg(){
 	 	<div class="description-no-img">
 			<div class="panel">
 				<time datetime="<?php the_time('F j, Y');?>"><?php the_time('F j, Y'); ?> </time>
-				<span class="title"><?php the_field('description'); ?></span>
+				<span class="title"><?php the_category(' '); ?></span>
 			</div>
 			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 			<p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
@@ -798,4 +800,20 @@ function articleimg(){
 <?php }
 }
 endif; 
+
+//register events CPT
+add_action( 'init', 'events_cpt' );
+
+function events_cpt() {
+
+register_post_type( 'event', array(
+  'labels' => array(
+    'name' => 'Events',
+    'singular_name' => 'Event',
+   ),
+  'description' => 'Add Upcoming Events',
+  'public' => true,
+  'supports' => array( 'title', 'editor', 'exceprt','custom-fields' )
+));
+}
  ?>

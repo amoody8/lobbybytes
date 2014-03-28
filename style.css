@@ -505,6 +505,26 @@ figure {
 	max-width: 600px;
 	width:100%;
 }
+a.lobo {
+	max-width:350px;
+	max-height:60px;
+	padding:0;
+	float:left;
+}
+@media (min-width:520px) and (max-width:992px){
+a.lobo {
+	max-width:350px;
+	max-height:60px;
+	padding:0;
+}
+}
+@media (max-width:519px){
+a.lobo {
+	max-width:230px;
+	max-height:60px;
+	padding:5px 0;
+}
+}
 .lobo-logo {
 	background: none;
 	height: 56px;
