@@ -67,7 +67,7 @@
 				<div class="nav-holder">
 					<div class="holder">
 				<button type="button" class="navbar-toggle sidebar-nav">
-							<span>Sidebar</span> <span class="sider purple glyphicon glyphicon-plus"></span>
+							<span class="sidebar">Sidebar</span> <span class="sider purple glyphicon glyphicon-plus"></span>
 					</button>
           			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
 							<div class="align">

@@ -1,43 +1,30 @@
 <?php
 /**
- * The template for displaying Archive pages.
- *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
- *
- * If you'd like to further customize these archive views, you may create a
- * new template file for each specific one. For example, Twenty Thirteen
- * already has tag.php for Tag archives, category.php for Category archives,
- * and author.php for Author archives.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * The Template for displaying all single posts.
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage lobbybytes
+ * @since LB 1.0
  */
-
 get_header(); ?>
 
-	<div id="content" class="col-sm-12 col-md-8">
+<div id="content" class="col-sm-12 col-md-8">
 	<div class="row">
+	<!-- featured blog post -->
 	<section class="blog-holder col-xs-12 col-md-12">
-		<?php query_posts('post_status=publish,future&post_type=am_event&posts_per_page=10'); ?>
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="date">
 			<time datetime="<?php the_time('F j, Y'); ?>"><?php am_the_startdate($format = 'D', $before = '', $after = '', $echo = true);?><strong><?php am_the_startdate($format = 'd', $before = '', $after = '', $echo = true);?></strong><?php am_the_startdate($format = 'M', $before = '', $after = '', $echo = true);?><span><?php am_the_startdate($format = 'Y', $before = '', $after = '', $echo = true);?></span></time>
-			<a href="<?php the_permalink(); ?>"><?php _e('View','lobbybytes');?></a>
 		</div>
 		<div class="blogs">
 			<article class="blog-detail col-xs-12 col-md-12 nopad" id="post-<?php the_ID(); ?>">
 					<?php if(get_field('event_details')): ?>
 					<?php while(has_sub_field('event_details')): ?>
 					
-					<!--<div class="image-holder hidden-xs">
+					<div class="image-holder hidden-xs">
 					
 						<img src="<?php the_sub_field('event_image'); ?>" />
 						
-					</div>-->
+					</div>
 					
 					<header class="description col-xs-12 col-sm-10 col-md-7">
 						<h4><?php the_sub_field('event_name');?></h4>
@@ -54,15 +41,14 @@ get_header(); ?>
 					<?php endif; ?>
 			</article>
 		</div>
-				<?php endwhile; else: ?>
-					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-				<?php endif; ?>
-				<?php blog_pagination(); ?>
+				<div class="clearfix"></div>
+				
 	</section>
 	</div>
 </div>
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 	</div>
 			</div>
 		</div>
+	
 <?php get_footer(); ?>

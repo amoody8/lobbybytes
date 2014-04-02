@@ -150,7 +150,7 @@
     text-decoration: none;
 }
 #calendar_wrap .wp-cal-datepicker-calendar tr td.WP-Cal-popup a{
-	color:#FFFFFF !important;
+    color:#FFFFFF !important;
 }
 
 #calendar_wrap .ui-datepicker-title span{
@@ -211,15 +211,49 @@
     width: 230px \0/;
 }
 
+.wp-cal-tooltip {
+    background-color: #F1F1F1;
+    border: 1px solid #A2A3A4 !important;
+    border-radius: 0 0 0 0 !important;
+    box-shadow: 0 2px 4px rgba(50, 50, 50, 0.63);
+    -webkit-box-shadow: 0 2px 4px rgba(50, 50, 50, 0.63);
+    -moz-box-shadow: 0 2px 4px rgba(50, 50, 50, 0.63);
+    -ms-filter-box-shadow: 0 2px 4px rgba(50, 50, 50, 0.63);
+    border-radius: 0px;
+    display: none;
+    padding: 7px;
+    position: absolute;
+    text-align: left;
+    width: 190px;
+    z-index: 10000;
+    width: 230px \9;
+    width: 230px \0/;
+}
+
 #calendar_wrap .wp-cal-datepicker-calendar tr td .wp-cal-tooltip ul li{
     background-color: #FFF !important;
     border-radius: 0px 0px 0px 0px;
     color: #FFFFFF;
     width: 93%;
-    display: block;
-    font-family: arial;
-    font-size: 11px;
-    font-weight: bold;
+    display: block; 
+    font-family: 'economicabold', Georgia, "Times New Roman", Times, serif;
+    font-size: 15px;
+    line-height: 1.1em;
+    margin-top: 2px;
+    padding: 8px;
+    text-decoration: none;
+    float: left;
+    float: left\9;
+    float: left\0/;
+}
+.wp-cal-tooltip ul li{
+    background-color: #FFF !important;
+    border-radius: 0px 0px 0px 0px;
+    color: #FFFFFF;
+    width: 100%;
+    display: block; 
+    font-family: 'economicabold', Georgia, "Times New Roman", Times, serif;
+    font-size: 15px;
     line-height: 1.1em;
     margin-top: 2px;
     padding: 8px;
@@ -235,8 +269,19 @@
     line-height: 15px;
     color:#6d6e72;
 }
+.wp-cal-tooltip ul li span{
+    float: left;
+    width: 100%;
+    line-height: 15px;
+    color:#6d6e72;
+}
 
 #calendar_wrap .wp-cal-datepicker-calendar tr td .wp-cal-tooltip ul li span a{
+    color: #6d6e72!important;
+    text-decoration: underline;
+}
+
+.wp-cal-tooltip ul li span a{
     color: #6d6e72!important;
     text-decoration: underline;
 }
@@ -246,7 +291,20 @@
     text-decoration: underline;
 }
 
+.wp-cal-tooltip ul li span a:hover{
+    color: #000000!important;
+    text-decoration: underline;
+}
+
+
 #calendar_wrap .wp-cal-datepicker-calendar tr td .wp-cal-tooltip ul li span{
+    float: left \9;
+    width: 90% \9;
+    float: left \0/;
+    width: 90% \0/;
+}
+
+.wp-cal-tooltip ul li span{
     float: left \9;
     width: 90% \9;
     float: left \0/;
@@ -256,7 +314,17 @@
 #calendar_wrap .wp-cal-datepicker-calendar tr td .wp-cal-tooltip ul li a .title {
     color: #6d6e72;
     display: block;
-    font-family: arial;
+    font-family: 'economicabold', Georgia, "Times New Roman", Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-bottom: 0px \9;
+    margin-bottom: 0px \0/;
+}
+.wp-cal-tooltip ul li a .title {
+    color: #6d6e72;
+    display: block;
+    font-family: 'economicabold', Georgia, "Times New Roman", Times, serif;
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -264,10 +332,11 @@
     margin-bottom: 0px \0/;
 }
 
+
 #calendar_wrap .wp-cal-datepicker-calendar tr td .wp-cal-tooltip ul li a .title:hover {
     color: #000;
     display: block;
-    font-family: arial;
+    font-family: 'economicabold', Georgia, "Times New Roman", Times, serif;
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -350,6 +419,92 @@
     font-size: 12px;
     font-weight: normal;
 }
+.wp-cal-tooltip ul li a .title:hover {
+    color: #000;
+    display: block;
+    font-family: 'economicabold', Georgia, "Times New Roman", Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    *color: #000;
+    _color : #000;
+    margin-bottom: 0px \9;
+    margin-bottom: 0px \0/;
+}
+
+.wp-cal-tooltip ul {
+    float: left;
+    font-size: 15px;
+    margin: 0;
+    padding:0;
+    width: 100%;
+}
+
+.wp-cal-tooltip ul li a .author {
+    font-style: normal;
+    padding-top: 3px;
+    color: #6d6e72 !important;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.wp-cal-tooltip ul li a .author:hover {
+    font-style: normal;
+    padding-top: 3px;
+    color: #000000;
+    font-size: 12px;
+    font-weight: normal;
+    *color: #000;
+    _color : #000;
+}
+
+.wp-cal-tooltip ul li a span {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    color: #000;
+}
+
+.wp-cal-tooltip span.date {
+    color: #FFF;
+    float: left;
+    text-align:center;
+    font:15px 'economicabold', Georgia, "Times New Roman", Times, serif;
+    padding: 5px 0;
+    width: 100%;
+    background:#000;
+}
+
+.wp-cal-tooltip ul li a .comments {
+    font-style: normal;
+    padding-top: 3px;
+    color: #6d6e72;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.wp-cal-tooltip ul li a .comments:hover {
+    font-style: normal;
+    padding-top: 3px;
+    color: #000;
+    font-size: 12px;
+    font-weight: normal;
+    *color: #000;
+    _color : #000;
+}
+
+.wp-cal-tooltip ul li a .category {
+    font-style: italic;
+    padding-top: 3px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.wp-cal-tooltip ul li a .category:hover {
+    color: #000;
+    font-size: 12px;
+    font-weight: normal;
+}
 
 #calendar_wrap .wp-cal-datepicker-calendar tr td.WP-Cal-popup {
     background: #421c52 !important;
@@ -397,8 +552,8 @@
 /*********************************** Calendar Size Style ***********************************/
 
 .widget_calendar_medium_size {
-    min-width: 287px !important;
-    width: 287px;
+    max-width: 100% !important;
+    width: 100%;
     width: 251px \9 !important;
     width: 253px \0/ !important;
 }
@@ -451,3 +606,8 @@
 .wp_calendar .calendar_wrap_loading {max-height:220px; margin: 0px auto ! important; width: 50% !important; text-align: center !important; position: relative !important;}
 .wp_calendar .calendar_wrap_loading_hide{display: none;}
 .wp_calendar .calendar_wrap_loading_show{display: block;}
+
+#wp-calendar tr {
+	border-top: 0px solid #DDD;
+	border-bottom: 0px solid #DDD;
+}

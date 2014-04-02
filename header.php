@@ -115,3 +115,4 @@
 				</div>
 				<!-- contain main informative part of the site -->
 				<div class="container">
+				<?php get_template_part('inc/booking_widget','lobbybytes'); ?>
