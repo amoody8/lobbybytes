@@ -631,7 +631,7 @@ function instagram(){
     print ig_shortcode(); 
 } 
 
-
+add_shortcode('event-name', 'eventname_insert_shortcode'); 
 
 //follow us shortcode
 function follow_shortcode(){ 
@@ -812,21 +812,21 @@ function articleimg(){
 }
 endif; 
 
-/*if ( ! function_exists( 'eventimg' ) ) :
-function eventimg(){
-	$image = the_sub_field('event_image');
-	if ( '' != get_sub_field('event_image') ) { ?>
-			<div class="image-holder hidden-xs">
-				<img src="<?php echo $image['url']; ?>" >
-			</div>
 
+
+if ( ! function_exists( 'eventimg' ) ) :
+function eventimg(){
+	if ( get_sub_field('event_image') && get_sub_field('event_image') != '' ) { ?>
+		<div class="image-holder hidden-xs">
+			<img src="<?php the_sub_field('event_image'); ?>" >
+		</div>
 	<?php }else{ ?>
 		<div style="display:none">
 			<div class="image-holder hidden-xs">
 				<?php the_sub_field('event_image'); ?>
 			</div>
 		</div>
-<?php }
-}
-endif; */
- ?>
+	<?php }
+	}
+	endif;
+?>

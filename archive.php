@@ -33,11 +33,7 @@ get_header(); ?>
 					<?php if(get_field('event_details')): ?>
 					<?php while(has_sub_field('event_details')): ?>
 					
-					<!--<div class="image-holder hidden-xs">
-					
-						<img src="<?php the_sub_field('event_image'); ?>" />
-						
-					</div>-->
+					<?php eventimg(); ?>
 					
 					<header class="description col-xs-12 col-sm-10 col-md-7">
 						<h4><?php the_sub_field('event_name');?></h4>

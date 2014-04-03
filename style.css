@@ -1035,8 +1035,8 @@ a.lobo {
     padding:1px 11px 3px 10px;
 }
 .text img {
-	max-width:100%;
-	height:auto;
+    max-width:100%;
+    height:auto;
 }
 
 /* NEW TAG STYLES */
@@ -1804,7 +1804,7 @@ ul#menu-categories li a:hover, li#categories-3 ul li.active a, li#categories-3 u
 }
 .widget.event time span{
     display:block;
-    margin:31px 0 0;
+    margin: 11px 0 -5px;
 }
 .widget.event .events{
     float:left;
@@ -1814,7 +1814,7 @@ ul#menu-categories li a:hover, li#categories-3 ul li.active a, li#categories-3 u
 }
 .widget.event .events li:first-child{
     border:none;
-    padding:0;
+    padding: 10px 0;
     margin:0;
 }
 .widget.event .events li{
@@ -2659,76 +2659,76 @@ a.at-quickshare-link: hover {
 }
 .wyndhamWidget .WHGWR_widget_wrap .WHGWR_search,
 .wyndhamWidget .WHGWR_widget_wrap .WHGWR_review {
-	background: #f3f3f3;
-	width: 300px;
-	float:left;
-	margin-top:0px;
-	margin-left: 19px;
-	padding-left: 50px;
-	padding-bottom: 15px;
-	padding-top: 10px;
-	position:relative;
-	display:block;
-	z-index:300;
+    background: #f3f3f3;
+    width: 300px;
+    float:left;
+    margin-top:0px;
+    margin-left: 19px;
+    padding-left: 50px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    position:relative;
+    display:block;
+    z-index:300;
 
 }
 /* Search Widget Button ** Start **
 ----------------------------------------
 .wyndhamWidget .WHGWR_widget_wrap .WHGWR_btn_box1{
-	width:230px;
-	height:43px;
-	margin-top: -43px;
-	position:relative;
-	float:left;
-	z-index:300;
-	margin-left: 20px;
+    width:230px;
+    height:43px;
+    margin-top: -43px;
+    position:relative;
+    float:left;
+    z-index:300;
+    margin-left: 20px;
 }
 .wyndhamWidget .WHGWR_btn_box1 .WHGWR_review_btn .WHGWR_up,
 .wyndhamWidget .WHGWR_btn_box1 .WHGWR_search_btn .WHGWR_up{
-	background: #732c7b; 
-	width: 95px; height: 43px; position: absolute; top: 0px; 
-	left: 0; z-index: 2; color: #fff; 
-	float: left; 
-	font-size: 15px; 
-	font-family: 'economicaregular',helvetica,arial,sans-serif; 
-	text-align: center; border-radius: 13px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; padding: 12px;
-	display:block;
-	position:relative;
-	cursor:pointer !important;
+    background: #732c7b; 
+    width: 95px; height: 43px; position: absolute; top: 0px; 
+    left: 0; z-index: 2; color: #fff; 
+    float: left; 
+    font-size: 15px; 
+    font-family: 'economicaregular',helvetica,arial,sans-serif; 
+    text-align: center; border-radius: 13px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; padding: 12px;
+    display:block;
+    position:relative;
+    cursor:pointer !important;
 }
 .wyndhamWidget .WHGWR_btn_box1 .WHGWR_search_btn .WHGWR_up{ 
-	background-position:0px 0px;
-	float:left;
+    background-position:0px 0px;
+    float:left;
 }
 .wyndhamWidget .WHGWR_btn_box1 .WHGWR_review_btn .WHGWR_up{
-	background-position:0 -86px;
-	float:right;
+    background-position:0 -86px;
+    float:right;
 }
 .wyndhamWidget .WHGWR_btn_box1 .WHGWR_review_btn .WHGWR_over,
 .wyndhamWidget .WHGWR_btn_box1 .WHGWR_search_btn .WHGWR_over{
-	background: #421c52;
-	width: 95px;
-	height: 43px;
-	position: absolute;
-	top:0px;
-	left: 0;
-	z-index: 2;
-	color: #fff;
-	font-size: 15px;
-	font-family: 'economicabold',helvetica,arial,sans-serif;
-	text-align: center;
-	border-radius: 13px;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	padding: 8px;
+    background: #421c52;
+    width: 95px;
+    height: 43px;
+    position: absolute;
+    top:0px;
+    left: 0;
+    z-index: 2;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'economicabold',helvetica,arial,sans-serif;
+    text-align: center;
+    border-radius: 13px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 8px;
 }
 .wyndhamWidget .WHGWR_btn_box1 .WHGWR_search_btn .WHGWR_over{
-	background-position:0 -43px;
+    background-position:0 -43px;
 }
 
 .wyndhamWidget .WHGWR_btn_box1 .WHGWR_review_btn .WHGWR_over{
-	background-position:0px -129px;
-	display:none;
+    background-position:0px -129px;
+    display:none;
 }
 
 .wyndhamWidget .WHGWR_btn_box1 .WHGWR_review_btn .WHGWR_over span,
@@ -2736,11 +2736,11 @@ a.at-quickshare-link: hover {
 /* Search Widget Button ** End **
 ----------------------------------------*/
 .wyndhamWidget .WHGWR_widget_box .WHGWR_btm_cap{
-	background: none;
-	width:230px;
-	height:32px;
-	position:relative;
-	float:left;
+    background: none;
+    width:230px;
+    height:32px;
+    position:relative;
+    float:left;
 }
 
 /*.wyndhamWidget .WHGWR_widget_wrap .WHGWR_search,
@@ -2758,13 +2758,13 @@ a.at-quickshare-link: hover {
 }*/
 
 table {
-	width:100%;
+    width:100%;
 }
 th {
-	text-align: center;
+    text-align: center;
 }
 .blogs ul.post-venues {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
