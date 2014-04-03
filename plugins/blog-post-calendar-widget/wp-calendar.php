@@ -72,7 +72,7 @@ function wp_calendar_enqueue_scripts() {
         wp_register_script('wp_calendar_datepicker-' . $regional, WP_CALENDAR_PLUGIN_URL . '/js/jquery.ui.datepicker-' . $regional . '.js');
     }
 
-    wp_register_script('wp_calendar_datepicker', WP_CALENDAR_PLUGIN_URL . '/js/jquery.ui.datepicker.js');
+   // wp_register_script('wp_calendar_datepicker', WP_CALENDAR_PLUGIN_URL . '/js/jquery.ui.datepicker.js');
     wp_register_script('wp_calendar_js', WP_CALENDAR_PLUGIN_URL . '/js/wp_calendar.js', array('jquery'));
 
     if (file_exists(WP_CALENDAR_THEME_CSS_PATH))
@@ -81,7 +81,7 @@ function wp_calendar_enqueue_scripts() {
         wp_register_style('wp_calendar_css', WP_CALENDAR_PLUGIN_CSS_URL);
 
     wp_enqueue_script('wp_calendar_datepicker-' . $regional);
-    wp_enqueue_script('wp_calendar_datepicker');
+   // wp_enqueue_script('wp_calendar_datepicker');
     wp_enqueue_style('wp_calendar_css');
 }
 
