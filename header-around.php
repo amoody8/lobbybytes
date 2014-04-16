@@ -79,7 +79,9 @@
 							<span class="icon-bar"></span>
 							</div>
 					</button>
-					<a title="<?php echo get_bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><img class="img-responsive pull-left" title="<?php bloginfo('name');?>" alt="<?php bloginfo('name');?>" src="<?php echo get_bloginfo('template_directory');?>/images/lobo.png "></a>
+					<a class="lobo" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo home_url(); ?>">
+						<h1 class="lobby">Lobbybytes</h1>
+					</a>
 
 					<div class="container collapse navbar-collapse navbar-responsive-collapse" id="nav">
 						<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
@@ -98,8 +100,9 @@
 						<div class="mask">
 							<div class="slideset">
 								<div class="slide">
-									<?php echo do_shortcode('[google-map-v3 shortcodeid="251f50a277" width="100%" height="391" zoom="12" maptype="roadmap" mapalign="center" directionhint="false" language="default" poweredby="false" styles="WyB7ICJmZWF0dXJlVHlwZSI6ICJ3YXRlciIsICJlbGVtZW50VHlwZSI6ICJnZW9tZXRyeSIsICJzdHlsZXJzIjogWyB7ICJodWUiOiAiIzc3MDBmZiIgfSwgeyAic2F0dXJhdGlvbiI6IC00OCB9LCB7ICJsaWdodG5lc3MiOiAtMjggfSwgeyAiZ2FtbWEiOiAxLjY2IH0gXSB9LHsgImZlYXR1cmVUeXBlIjogInJvYWQuaGlnaHdheSIsICJzdHlsZXJzIjogWyB7ICJodWUiOiAiI2ZmMTEwMCIgfSwgeyAic2F0dXJhdGlvbiI6IC00OSB9LCB7ICJsaWdodG5lc3MiOiAtMTkgfSwgeyAiZ2FtbWEiOiAxLjUgfSBdIH0seyAiZmVhdHVyZVR5cGUiOiAibGFuZHNjYXBlLm1hbl9tYWRlIiwgImVsZW1lbnRUeXBlIjogImdlb21ldHJ5LmZpbGwiLCAic3R5bGVycyI6IFsgeyAiY29sb3IiOiAiI2U0ZDdkZCIgfSBdIH0seyAiZmVhdHVyZVR5cGUiOiAicm9hZC5sb2NhbCIsICJlbGVtZW50VHlwZSI6ICJnZW9tZXRyeS5zdHJva2UiLCAic3R5bGVycyI6IFsgeyAid2VpZ2h0IjogMC41IH0sIHsgImNvbG9yIjogIiM4MjgwODAiIH0gXSB9LHsgImVsZW1lbnRUeXBlIjogImxhYmVscy5pY29uIiwgInN0eWxlcnMiOiBbIHsgImh1ZSI6ICIjYjMwMGZmIiB9IF0gfSBd" maptypecontrol="false" pancontrol="true" zoomcontrol="true" scalecontrol="true" streetviewcontrol="false" scrollwheelcontrol="true" draggable="true" tiltfourtyfive="false" enablegeolocationmarker="true" enablemarkerclustering="true" addmarkermashup="false" addmarkermashupbubble="false" addmarkerlist="355 W 16th St, New York, NY 10011{}2-default.png{}PH-D Rooftop Lounge 355 W 16th St New York, NY 10011 (212) 229-2511 phdlounge.com Bar$$$$ Today 5:00 pm – 4:00 am" bubbleautopan="true" distanceunits="miles" showbike="false" showtraffic="false" showpanoramio="false"]
-'); ?>
+									<!--<?php echo do_shortcode('[google-map-v3 shortcodeid="251f50a277" width="100%" height="391" zoom="12" maptype="roadmap" mapalign="center" directionhint="false" language="default" poweredby="false" styles="WyB7ICJmZWF0dXJlVHlwZSI6ICJ3YXRlciIsICJlbGVtZW50VHlwZSI6ICJnZW9tZXRyeSIsICJzdHlsZXJzIjogWyB7ICJodWUiOiAiIzc3MDBmZiIgfSwgeyAic2F0dXJhdGlvbiI6IC00OCB9LCB7ICJsaWdodG5lc3MiOiAtMjggfSwgeyAiZ2FtbWEiOiAxLjY2IH0gXSB9LHsgImZlYXR1cmVUeXBlIjogInJvYWQuaGlnaHdheSIsICJzdHlsZXJzIjogWyB7ICJodWUiOiAiI2ZmMTEwMCIgfSwgeyAic2F0dXJhdGlvbiI6IC00OSB9LCB7ICJsaWdodG5lc3MiOiAtMTkgfSwgeyAiZ2FtbWEiOiAxLjUgfSBdIH0seyAiZmVhdHVyZVR5cGUiOiAibGFuZHNjYXBlLm1hbl9tYWRlIiwgImVsZW1lbnRUeXBlIjogImdlb21ldHJ5LmZpbGwiLCAic3R5bGVycyI6IFsgeyAiY29sb3IiOiAiI2U0ZDdkZCIgfSBdIH0seyAiZmVhdHVyZVR5cGUiOiAicm9hZC5sb2NhbCIsICJlbGVtZW50VHlwZSI6ICJnZW9tZXRyeS5zdHJva2UiLCAic3R5bGVycyI6IFsgeyAid2VpZ2h0IjogMC41IH0sIHsgImNvbG9yIjogIiM4MjgwODAiIH0gXSB9LHsgImVsZW1lbnRUeXBlIjogImxhYmVscy5pY29uIiwgInN0eWxlcnMiOiBbIHsgImh1ZSI6ICIjYjMwMGZmIiB9IF0gfSBd" maptypecontrol="false" pancontrol="true" zoomcontrol="true" scalecontrol="true" streetviewcontrol="false" scrollwheelcontrol="true" draggable="true" tiltfourtyfive="false" enablegeolocationmarker="true" enablemarkerclustering="true" addmarkermashup="false" addmarkermashupbubble="false" addmarkerlist="355 W 16th St, New York, NY 10011{}2-default.png{}PH-D Rooftop Lounge 355 W 16th St New York, NY 10011 (212) 229-2511 phdlounge.com Bar$$$$ Today 5:00 pm – 4:00 am" bubbleautopan="true" distanceunits="miles" showbike="false" showtraffic="false" showpanoramio="false"]'); ?>
+									-->
+									<?php the_map(); ?>
 								</div>
 							</div>
 						</div>
