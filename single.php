@@ -21,8 +21,8 @@ get_header(); ?>
 					<div class="clearfix"></div>
 					<header class="panel">
 						<time datetime="<?php the_time('F j, Y'); ?>"><?php the_time('F j, Y'); ?> </time>
-						<span class="title"><?php the_field('description'); ?></span>
-						<strong class="author">By:<?php the_field('author'); ?></strong>
+						<span class="title"><?php the_category(' '); ?></span>
+						<strong class="author"><?php _e("By:", "lobbybytes"); ?> <?php the_author_posts_link(); ?></strong>
 					</header>
 					<?php the_content(); ?>
 					<aside  class="tags">

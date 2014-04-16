@@ -19,7 +19,8 @@ get_header(); ?>
 					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 				<?php endif; ?>
 				<div class="clearfix"></div>
-				
+				<div class="pag-prev"><?php previous_posts_link('Prev'); ?></div>
+				<div class="pag-next"><?php next_posts_link('Next'); ?></div>
 	</section>
 	</div>
 </div>

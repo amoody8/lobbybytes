@@ -21,9 +21,9 @@ get_header(); ?>
 
 	<div id="content" class="col-sm-12 col-md-8">
 	<div class="row">
-	<section class="blog-holder col-xs-12 col-md-12">
 		<?php query_posts('post_status=publish,future&post_type=am_event&posts_per_page=10'); ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<section class="blog-holder col-xs-12 col-md-12">
 		<div class="date">
 			<time datetime="<?php the_time('F j, Y'); ?>"><?php am_the_startdate($format = 'D', $before = '', $after = '', $echo = true);?><strong><?php am_the_startdate($format = 'd', $before = '', $after = '', $echo = true);?></strong><?php am_the_startdate($format = 'M', $before = '', $after = '', $echo = true);?><span><?php am_the_startdate($format = 'Y', $before = '', $after = '', $echo = true);?></span></time>
 			<a href="<?php the_permalink(); ?>"><?php _e('View','lobbybytes');?></a>
@@ -50,11 +50,13 @@ get_header(); ?>
 					<?php endif; ?>
 			</article>
 		</div>
+		</section>
 				<?php endwhile; else: ?>
 					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 				<?php endif; ?>
-				<?php blog_pagination(); ?>
-	</section>
+				<div class="pag-prev"><?php previous_posts_link('Prev'); ?></div>
+				<div class="pag-next"><?php next_posts_link('Next'); ?></div>
+	
 	</div>
 </div>
 <?php get_sidebar(); ?>

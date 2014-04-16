@@ -16,6 +16,8 @@ get_header(); ?>
 			<time datetime="<?php the_time('F j, Y'); ?>"><?php am_the_startdate($format = 'D', $before = '', $after = '', $echo = true);?><strong><?php am_the_startdate($format = 'd', $before = '', $after = '', $echo = true);?></strong><?php am_the_startdate($format = 'M', $before = '', $after = '', $echo = true);?><span><?php am_the_startdate($format = 'Y', $before = '', $after = '', $echo = true);?></span></time>
 		</div>
 		<div class="blogs">
+		<?php query_posts('post_status=publish,future&post_type=am_event'); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="blog-detail col-xs-12 col-md-12 nopad" id="post-<?php the_ID(); ?>">
 					<?php if(get_field('event_details')): ?>
 					<?php while(has_sub_field('event_details')): ?>
@@ -35,6 +37,9 @@ get_header(); ?>
 					<?php endwhile; ?>
 					<?php endif; ?>
 			</article>
+			<?php endwhile; else: ?>
+					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+				<?php endif; ?>
 		</div>
 				<div class="clearfix"></div>
 				

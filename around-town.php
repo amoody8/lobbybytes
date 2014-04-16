@@ -13,10 +13,6 @@ get_header('around'); ?>
 		</header>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="about col-md-12 nopad" id="post-<?php the_ID(); ?>">
-				<header class="panel">
-						<time datetime="<?php the_time('F j, Y'); ?>"><?php the_time('F j, Y'); ?> </time>
-						<span class="title"><?php the_field('description'); ?></span>
-					</header>
 					<?php the_content(); ?>
 				
 			</article>
@@ -24,7 +20,8 @@ get_header('around'); ?>
 					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 				<?php endif; ?>
 				<div class="clearfix"></div>
-				<!--<?php blog_pagination(); ?>-->
+				<div class="pag-prev"><?php previous_posts_link('Prev'); ?></div>
+				<div class="pag-next"><?php next_posts_link('Next'); ?></div>
 	</section>
 </div>
 </div>
