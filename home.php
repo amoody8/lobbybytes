@@ -19,7 +19,6 @@ get_header(); ?>
 					</div>
 					<header class="panel">
 						<time datetime="<?php the_time('F j, Y'); ?>"><?php the_time('F j, Y'); ?> </time>
-						<span class="title"><?php the_category(' '); ?></span>
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					</header>
 					<p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
