@@ -1,32 +1,29 @@
 <?php get_header(); ?>
-			
-			<div id="content" class="clearfix row">
-			
-				<div id="main" class="col col-lg-8 clearfix" role="main">
-				
-					<div class="page-header"><h1><span><?php _e("Search Results for","lobbybytes"); ?>:</span> <?php echo esc_attr(get_search_query()); ?></h1></div>
+	
+	<div id="content" class="col-sm-12 col-md-8">
+		<div id="main" class="row">
+			<section class="latest-post col-xs-12 col-md-12">
+				<header class="heading">
+					<h2><?php _e("Search Results for","lobbybytes"); ?>:<?php echo esc_attr(get_search_query()); ?></h2>
+				</header>
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+					<header class="panel">
+							<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+						</header>
+					<article class="text <?php post_class('clearfix'); ?>" id="post-<?php the_ID(); ?>"  role="article">
+	
 						
-						<header>
-							
-							<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-							
-							<p class="meta"><?php _e("Posted", "lobbybytes"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time(); ?></time> <?php _e("by", "lobbybytes"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "lobbybytes"); ?> <?php the_category(', '); ?>.</p>
-						
-						</header> <!-- end article header -->
+						<header class="panel">
+							 <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php _e("Posted", "lobbybytes"); ?>:<?php the_time(); ?></time>
+							<span class="title"> <?php the_category(', '); ?></span>
+							<strong class="author"><?php _e("By:", "lobbybytes"); ?> <?php the_author_posts_link(); ?></strong>
+						</header>
 					
 						<section class="post_content">
 							<?php the_excerpt('<span class="read-more">' . __("Read more on","lobbybytes") . ' "'.the_title('', '', false).'" &raquo;</span>'); ?>
 					
 						</section> <!-- end article section -->
-						
-						<footer>
-					
-							
-						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
 					
@@ -37,12 +34,12 @@
 						<?php page_navi(); // use the page navi function ?>
 						
 					<?php } else { // if it is disabled, display regular wp prev & next links ?>
-						<nav class="wp-prev-next">
-							<ul class="clearfix">
-								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "lobbybytes")) ?></li>
-								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "lobbybytes")) ?></li>
+						<div class="pagination">
+							<ul>
+								<li><?php next_posts_link(_e('&laquo; Older', "lobbybytes")) ?></li>
+								<li><?php previous_posts_link(_e('Newer &raquo;', "lobbybytes")) ?></li>
 							</ul>
-						</nav>
+						</div>
 					<?php } ?>			
 					
 					<?php else : ?>
@@ -63,9 +60,7 @@
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
-    			
-    			<?php get_sidebar(); // sidebar 1 ?>
-    
 			</div> <!-- end #content -->
+			<?php get_sidebar(); // sidebar 1 ?>
 
 <?php get_footer(); ?>
