@@ -13,7 +13,6 @@ get_header(); ?>
 	<!-- featured blog post -->
 	<section class="latest-post col-md-12">
 		<h2><?php the_title(); ?></h2>
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article class="text" id="post-<?php the_ID(); ?>">
 					<!--<div class="image-holder">
 						<?php the_post_thumbnail('featured-thumb'); ?>
@@ -31,9 +30,6 @@ get_header(); ?>
 				</article>
 				<div class="clearfix"></div>
 				<?php comments_template(); ?>
-				<?php endwhile; else: ?>
-					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-				<?php endif; ?>
 				
 	</section>
 	</div>

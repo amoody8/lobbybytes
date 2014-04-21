@@ -184,11 +184,11 @@ if( is_singular() )
 		$links[] = $paged + 1;
 	}
 
-	echo '<div class="navigation"><ul>' . "\n";
+	echo '<div class="paginate"><ul>' . "\n";
 
 	/**	Previous Post Link */
 	if ( get_previous_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+		printf( '<li class="pag-prev">%s</li>' . "\n", get_previous_posts_link('Prev') );
 
 	/**	Link to first page, plus ellipses if necessary */
 	if ( ! in_array( 1, $links ) ) {
@@ -218,7 +218,7 @@ if( is_singular() )
 
 	/**	Next Post Link */
 	if ( get_next_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+		printf( '<li class="pag-next">%s</li>' . "\n", get_next_posts_link('Next') );
 
 	echo '</ul></div>' . "\n";
 

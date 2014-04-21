@@ -1040,7 +1040,7 @@ pre code {
     margin-left: 0%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px /*992px*/) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
@@ -3658,17 +3658,19 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
 }
+@media (min-width: 1024px) {
+.navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+ }
 @media (min-width: 770px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
     box-shadow: none;
-  }
-  .navbar-collapse.collapse {
-    display: block !important;
-    height: auto !important;
-    padding-bottom: 0;
-    overflow: visible !important;
   }
   .navbar-collapse.in {
     overflow-y: visible;
