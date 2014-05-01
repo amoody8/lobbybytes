@@ -48,7 +48,7 @@
 							<strong class="logo"><a class="homebtn" href="<?php echo site_url(); ?>">Dream Downtown</a></strong>
 							<!-- copyright of the page -->
 							<div class="copyright">
-								<p><?php _e('Content &copy; Copyright', $text_domain); ?> <?php echo date_i18n('Y'); ?> <?php bloginfo('name'); ?><?php _e('Dream Downtown  All rights reserved.', $text_domain); ?><span>Site Design by <a href="http://www.tvidesigns.com/">TVI</a></span></p>
+								<p><?php _e('Content &copy; Copyright', $text_domain); ?> <?php echo date_i18n('Y'); ?> <?php bloginfo('name'); ?> <?php _e('Dream Downtown  All rights reserved.', $text_domain); ?><span>Site Design by <a href="http://www.tvidesigns.com/">TVI</a></span></p>
 							</div>
 						</div>
 					</div>

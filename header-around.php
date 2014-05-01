@@ -60,7 +60,8 @@
 							<!-- search from of the page -->
 							<?php get_search_form(); ?>
 							<!-- logo of the page -->
-							<strong class="logo"><a class="homebtn" href="<?php echo site_url(); ?>">Dream Downtown</a></strong>
+							<!--<strong class="logo"><a class="homebtn" href="<?php echo site_url(); ?>">Dream Downtown</a></strong>-->
+							<?php get_template_part('inc/follow-top','lobbybytes'); ?>
 						</div>
 					</div>
 					<div class="navbar navbar-default" role="navigation" id="menu">

@@ -137,7 +137,7 @@ figure {
     width: 100%;
     background: #25292b;
     border-bottom: 1px solid #2a2f31;
-    padding: 9px 0 8px;
+    padding: 9px 0 0;
 }
 /* page logo styles */
 .logo {
@@ -168,10 +168,11 @@ figure {
     border-bottom: 1px solid #2a2e30;
     overflow: hidden;
     height: 20px;
-    padding: 4px 10px 2px 12px;
+    padding: 2px 10px 2px 12px;
     max-width:265px;
     margin-left:0;
     margin-right:0;
+    margin-top: 5px;
 }
 .search-form ::-webkit-input-placeholder { /* WebKit browsers */
     color: #7c7d7d;
@@ -199,6 +200,14 @@ figure {
     line-height: 16px;
     font-style:italic;
     height: 16px;
+}
+@media (max-width:320px) {
+	.search-form input[type="text"] {
+    	max-width: 85px;
+    	margin: 0 10px 0 0;
+    	font-size: 10px;
+    	line-height: 10px;
+	}
 }
 .search-form input[type="submit"] {
     padding:0;
@@ -1896,12 +1905,27 @@ li.widget{
     float: left;
     margin:0 0 9px;
 }
-.widget.follow .social-networks li{margin:0 4px 5px 0;}
+.widget.follow .social-networks li{margin:0 4px 0 0;}
 .widget.follow .facebook a{background:url(../lobbybytes/images/sprite.png) no-repeat 0 -104px;}
 .widget.follow .twitter a{background:url(../lobbybytes/images/sprite.png) no-repeat -39px -104px;}
 .widget.follow .instagram a{background:url(../lobbybytes/images/sprite.png) no-repeat -77px -104px;}
 .widget.follow .vimeo a{background:url(../lobbybytes/images/sprite.png) no-repeat -117px -104px;}
 .widget.follow .mixcloud a{background:url(../lobbybytes/images/sprite.png) no-repeat -156px -104px;}
+
+.top.follow {
+    padding:0;
+    margin:0;
+}
+.top.follow .social-networks {
+    float: left;
+    margin:0;
+}
+.top.follow .social-networks li{margin:0 4px 5px 0;}
+.top.follow .facebook a{background:url(../lobbybytes/images/sprite.png) no-repeat 0 -104px;}
+.top.follow .twitter a{background:url(../lobbybytes/images/sprite.png) no-repeat -39px -104px;}
+.top.follow .instagram a{background:url(../lobbybytes/images/sprite.png) no-repeat -77px -104px;}
+.top.follow .vimeo a{background:url(../lobbybytes/images/sprite.png) no-repeat -117px -104px;}
+.top.follow .mixcloud a{background:url(../lobbybytes/images/sprite.png) no-repeat -156px -104px;}
 
 /* subscribe form style */
 
@@ -2314,8 +2338,9 @@ ul#menu-categories li a:hover, li#categories-3 ul li.active a, li#categories-3 u
     width: 100%;
     background: #080808;
 }
-.footer-bottom .logo{
-    margin:3px 0 0;
+.footer-bottom .logo {
+    margin-top: 3px;
+    margin-right: 20px;
 }
 .social-networks {
     list-style: none;
