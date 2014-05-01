@@ -115,37 +115,35 @@
 }
 
 #calendar_wrap .wp-cal-datepicker-calendar tr th{
-    font-size: 12px;
+    font-size: 15px;
     line-height: 10px;
     padding: 9px!important;
     text-align: center;
-    background: #ffffff;
-    border: 0.1em solid #999999;
+    border: none;
     font-weight: bold;
     color: #6d6e72;
 }
 
 #calendar_wrap .wp-cal-datepicker-calendar tr td{
-    font-size: 11px;
+    font-size: 15px;
     line-height: 10px;
     padding: 9px!important;
     text-align: center;
-    background: #f1f1f1;
-    border: 0.1em solid #999999;
+    border: none;
     font-weight: normal;
     color: #000000 !important;
 }
 
 #calendar_wrap .wp-cal-datepicker-calendar tr td a{
     color: #000;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: bold;
     text-decoration: none;
 }
 
 #calendar_wrap .wp-cal-datepicker-calendar tr td a:hover{
     color: #000;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -234,7 +232,7 @@
     background-color: #FFF !important;
     border-radius: 0px 0px 0px 0px;
     color: #FFFFFF;
-    width: 93%;
+    width: 100%;
     display: block; 
     font-family: 'economicabold', Georgia, "Times New Roman", Times, serif;
     font-size: 15px;

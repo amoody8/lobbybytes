@@ -34,17 +34,17 @@ function my_jquery_enqueue() {
    wp_deregister_script('otw_dropdown_js');
    wp_deregister_script('jquery');
    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", false, null);
-   wp_register_script('jquery-ui', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js", false, null);
+   //wp_register_script('jquery-ui', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js", false, null);
    wp_register_script('jquery-migrate', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-migrate-1.2.1.js", false, null);
    wp_enqueue_script('jquery');
-   wp_enqueue_script('jquery-ui');
+   //wp_enqueue_script('jquery-ui');
    wp_enqueue_script('jquery-migrate');
 }
 function am_scripts_with_jquery()
 {
 // Register Scripts
 	wp_register_script( 'custom-script', get_template_directory_uri() . '/js/jquery.main.js', array( 'jquery' ) );
-	//wp_register_script( 'customui-script', get_template_directory_uri() . '/js/jquery-ui-1.10.4.custom.min.js', array( 'jquery' ) );
+	wp_register_script( 'customui-script', get_template_directory_uri() . '/js/jquery-ui-1.9.2.custom.min.js', array( 'jquery' ) );
 	wp_register_script( 'sticky-nav', get_template_directory_uri() . '/js/jquery.sticky.js', array( 'jquery' ) );
 	wp_register_script( 'bootstrap-min', get_template_directory_uri() . '/bootstrap/dist/js/bootstrap.min.js', array( 'jquery' ) );
 	wp_register_script( 'dropdown-script', get_template_directory_uri() . '/bootstrap/js/hover-dropdown.min.js', array( 'jquery' ) );
@@ -52,7 +52,7 @@ function am_scripts_with_jquery()
 	wp_register_script( 'placeholder-script', get_template_directory_uri() . '/js/jquery.placeholder.js', array( 'jquery' ) );
 // Enqueue Scripts
 	wp_enqueue_script( 'custom-script' );
-	//wp_enqueue_script( 'customui-script' );
+	wp_enqueue_script( 'customui-script' );
 	wp_enqueue_script( 'sticky-nav' );
 	wp_enqueue_script( 'bootstrap-min' );
 	wp_enqueue_script( 'dropdown-script' );
